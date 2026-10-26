@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f3efff">
+    <title>Play with the computer — Little Tic Tac Toe</title>
+    <link rel="stylesheet" href="TicTacToe.css">
+    <script src="game.js" defer></script>
+</head>
+<body data-game-mode="computer">
+    <main class="page-shell game-shell">
+        <header class="site-header">
+            <a class="brand" href="/" aria-label="Tic Tac Toe home">
+                <span class="brand-mark" aria-hidden="true"><span>X</span><span>O</span></span>
+                <span>little <strong>tic tac toe</strong></span>
+            </a>
+            <a class="back-link" href="/" data-quit-confirm><span aria-hidden="true">⌂</span> Home</a>
+        </header>
+
+        <section class="game-layout" aria-labelledby="page-title">
+            <span class="game-floating-mark game-floating-x game-floating-x-one" aria-hidden="true">×</span>
+            <span class="game-floating-mark game-floating-o game-floating-o-one" aria-hidden="true">○</span>
+            <span class="game-floating-mark game-floating-o game-floating-o-two" aria-hidden="true">○</span>
+            <span class="game-floating-mark game-floating-x game-floating-x-two" aria-hidden="true">×</span>
+            <div class="game-copy">
+                <p class="eyebrow">A LITTLE ONE-ON-ONE</p>
+                <h1 id="page-title">You and your<br>clever <span>opponent.</span></h1>
+                <p class="intro">Take a breath, find your strategy, and see if you can outsmart the computer.</p>
+                <div class="player-pills" aria-label="Players">
+                    <span class="player-pill player-x"><span class="player-symbol">×</span> You · X</span>
+                    <span class="versus">VS</span>
+                    <span class="player-pill player-o"><span class="player-symbol">○</span> Computer</span>
+                </div>
+                <a class="switch-mode" href="friends.html">Want a real-life rival? <span>Play with a friend <span aria-hidden="true">↗</span></span></a>
+            </div>
+
+            <section class="game-card" aria-label="Tic-tac-toe game">
+                <div class="card-topline">
+                    <span class="card-label"><span class="sparkle" aria-hidden="true">✳</span> COMPUTER MODE</span>
+                    <span class="round-label"><span class="live-dot"></span> YOUR ROUND</span>
+                </div>
+                <div class="scoreboard" aria-label="Match wins">
+                    <div class="score-item score-x">
+                        <span class="score-player">
+                            <span class="score-symbol" aria-hidden="true">×</span>
+                            <span id="score-x-label">You</span>
+                        </span>
+                        <span class="score-count" id="score-x-count" aria-live="polite">0</span>
+                    </div>
+                    <span class="score-separator" aria-hidden="true">—</span>
+                    <div class="score-item score-o">
+                        <span class="score-player">
+                            <span class="score-symbol" aria-hidden="true">○</span>
+                            <span id="score-o-label">Computer</span>
+                        </span>
+                        <span class="score-count" id="score-o-count" aria-live="polite">0</span>
+                    </div>
+                </div>
+                <div class="game-heading">
+                    <h2>Make your move.</h2>
+                    <p>Three in a row takes the round.</p>
+                </div>
+                <div class="board-wrap">
+                    <div class="game-board" role="group" aria-label="Tic-tac-toe board">
+                        <button class="board-cell" type="button" data-position="0" aria-label="Empty square, row 1 column 1"></button>
+                        <button class="board-cell" type="button" data-position="1" aria-label="Empty square, row 1 column 2"></button>
+                        <button class="board-cell" type="button" data-position="2" aria-label="Empty square, row 1 column 3"></button>
+                        <button class="board-cell" type="button" data-position="3" aria-label="Empty square, row 2 column 1"></button>
+                        <button class="board-cell" type="button" data-position="4" aria-label="Empty square, row 2 column 2"></button>
+                        <button class="board-cell" type="button" data-position="5" aria-label="Empty square, row 2 column 3"></button>
+                        <button class="board-cell" type="button" data-position="6" aria-label="Empty square, row 3 column 1"></button>
+                        <button class="board-cell" type="button" data-position="7" aria-label="Empty square, row 3 column 2"></button>
+                        <button class="board-cell" type="button" data-position="8" aria-label="Empty square, row 3 column 3"></button>
+                    </div>
+                    <svg class="win-overlay" viewBox="0 0 300 300" aria-hidden="true">
+                        <path class="win-line"></path>
+                    </svg>
+                </div>
+                <p class="game-status" id="game-status" aria-live="polite">Starting a new round…</p>
+                <button class="new-game-button" id="new-game" type="button"><span aria-hidden="true">↻</span> Start a new game</button>
+                <div class="card-footer"><span>NO PRESSURE</span><span>JUST FOR FUN <span aria-hidden="true">♡</span></span></div>
+            </section>
+        </section>
+
+        <footer class="site-footer">
+            <span>Made for the in-between moments.</span>
+            <span class="footer-doodle" aria-hidden="true">× &nbsp; ○ &nbsp; ×</span>
+        </footer>
+    </main>
+</body>
+</html>
